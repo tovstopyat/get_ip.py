@@ -10,14 +10,14 @@ def connect(ip):
  telnet.write("tom\r")
  print telnet.read_until("Password:")
  telnet.write("rkhknp\r")
- telnet.read_until(">",2)
+ telnet.read_until(">" or """#""" ,2)
  i = 1
  try:
    print tn.read_until("""#""",0.5)
  except Exception:
    i = 0
  if i == 0:
-  telnet.write("enable\r")
+  telnet.write("enable\Meg@Pup$\ ,2 r")
   telnet.read_until("Password:")
   telnet.write("Meg@Pup$\r")
  telnet.read_until("""#""")
